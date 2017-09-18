@@ -5,14 +5,21 @@
     <tr>
       <th>Point Value</th>
       <th>Category</th>
+      <th>Your Score</th>
     </tr>
     <tr>
-      <td>{{questionInfo.value}}</td>
-      <td>{{questionInfo.category.title}}</td>
+      <td>{{questionInfo?.value}}</td>
+      <td>{{questionInfo?.category.title}}</td>
+      <td>{{score}}</td>
     </tr>
   </table>
 
   <h2>Question</h2>
-  <p>{{questionInfo.question}}</p>
-  <input type="text"> <input type="submit">
+  <p>{{questionInfo?.question}}</p>
+  <input type="text" [(ngModel)]="answer"> <input type="submit" (click)="submitClick(answer)">
   
+ {{questionInfo?.answer}}
+
+ <div *ngIf="wrongAnswer">
+  <p>Incorrect Answer, Try Again</p>
+ </div>
