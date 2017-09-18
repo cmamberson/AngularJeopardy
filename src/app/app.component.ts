@@ -8,10 +8,9 @@ import { JeopardyService } from './jeopardy.service';
 })
 export class AppComponent implements OnInit {
   title = 'app';
-  questionInfo;
-  answer;
   score = 0;
-  wrongAnswer;
+  questionInfo;
+
 
   constructor(private jeopardyService: JeopardyService){}
     
@@ -28,19 +27,7 @@ export class AppComponent implements OnInit {
       this.getDataFromService();
     }
 
-    submitClick(answer){
-      this.answer = answer;
-      if (answer.toLowerCase() == this.questionInfo.answer.toLowerCase()){
-        this.score += this.questionInfo.value
-        this.getDataFromService();
-        this.answer = "";
-        this.wrongAnswer = false;
-      }
-      else{
-        this.wrongAnswer = true;
-      }
-
-    }
+    
     
 }
 
