@@ -25,10 +25,10 @@ export class AnswerComponent implements OnInit {
     this.answer = answer;
     if (answer.toLowerCase() == this.questionInfo.answer.toLowerCase()){
       this.score += this.questionInfo.value
-      this.refreshQuestion.emit(this.questionInfo)
       this.answer = "";
       this.wrongAnswer = false;
       this.correctAnswer = true;
+      this.refreshQuestion.emit(this.questionInfo)
     }
     else{
       this.wrongAnswer = true;
