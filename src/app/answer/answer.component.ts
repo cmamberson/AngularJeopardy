@@ -13,7 +13,7 @@ export class AnswerComponent implements OnInit {
 
   @Output() refreshQuestion = new EventEmitter<any>();
 
-  // @Input() getDataFromService();
+
 
   constructor() { }
 
@@ -24,7 +24,6 @@ export class AnswerComponent implements OnInit {
     this.answer = answer;
     if (answer.toLowerCase() == this.questionInfo.answer.toLowerCase()){
       this.score += this.questionInfo.value
-      // this.getDataFromService();
       this.refreshQuestion.emit(this.questionInfo)
       this.answer = "";
       this.wrongAnswer = false;
