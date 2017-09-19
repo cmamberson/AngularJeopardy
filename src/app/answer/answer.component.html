@@ -1,5 +1,9 @@
-<input type="text" [(ngModel)]="answer"> <input type="submit" (click)="submitClick(answer)">
+<input type="text" [(ngModel)]="answer"> <input type="submit" (click)="submitClick(answer)" id="btn">
 
 <div *ngIf="wrongAnswer">
-<p>Incorrect Answer, Try Again</p>
+<p id="wanswer">Wronge answer, try again.</p>
+</div>
+
+<div *ngIf="correctAnswer">
+<p id="canswer">Correct! You have been awarded {{questionInfo.value}} points.</p>
 </div>

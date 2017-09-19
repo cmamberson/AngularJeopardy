@@ -8,9 +8,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class AnswerComponent implements OnInit {
   answer;
   wrongAnswer;
+  correctAnswer;
+
   @Input() questionInfo;
   @Input() score;
-
   @Output() refreshQuestion = new EventEmitter<any>();
 
 
@@ -27,9 +28,11 @@ export class AnswerComponent implements OnInit {
       this.refreshQuestion.emit(this.questionInfo)
       this.answer = "";
       this.wrongAnswer = false;
+      this.correctAnswer = true;
     }
     else{
       this.wrongAnswer = true;
+      this.correctAnswer = false;
     }
 
   }

@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
         .subscribe(
           questionInfo => {
             this.questionInfo = questionInfo[0];
-            console.log("the answer is: " + questionInfo[0].answer)
+            console.log("The answer is: " + questionInfo[0].answer)
           }
         )
     }
