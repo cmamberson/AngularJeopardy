@@ -1,7 +1,7 @@
 <input type="text" [(ngModel)]="answer"> <input type="submit" (click)="submitClick(answer)" id="btn">
 
 <div *ngIf="wrongAnswer">
-<p id="wanswer">Wrong answer, try again.</p>
+<p id="wanswer">Wrong answer, no points awarded.</p>
 </div>
 
 <div *ngIf="correctAnswer">

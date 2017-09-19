@@ -33,6 +33,8 @@ export class AnswerComponent implements OnInit {
     else{
       this.wrongAnswer = true;
       this.correctAnswer = false;
+      this.answer = "";
+      this.refreshQuestion.emit(this.questionInfo)
     }
 
   }
