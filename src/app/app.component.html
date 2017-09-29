@@ -16,4 +16,4 @@
 
   <h2>Question</h2>
   <p>{{questionInfo?.question}}</p>
-  <app-answer [questionInfo]="questionInfo" [score]="score" (refreshQuestion)="getDataFromService($event)" #answerAttributes></app-answer>
+  <app-answer [questionInfo]="questionInfo" [score]="score" (refreshQuestion)="getDataFromService()" #answerAttributes></app-answer>

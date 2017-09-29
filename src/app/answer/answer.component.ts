@@ -28,13 +28,13 @@ export class AnswerComponent implements OnInit {
       this.answer = "";
       this.wrongAnswer = false;
       this.correctAnswer = true;
-      this.refreshQuestion.emit(this.questionInfo)
+      this.refreshQuestion.emit()
     }
     else{
       this.wrongAnswer = true;
       this.correctAnswer = false;
       this.answer = "";
-      this.refreshQuestion.emit(this.questionInfo)
+      this.refreshQuestion.emit()
     }
 
   }
